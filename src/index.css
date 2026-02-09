@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-slate-950 text-slate-400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+
+  /* Enhanced Button Styles with Active States */
+  .btn-primary {
+    @apply bg-primary-orange hover:bg-primary-orange-dark text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-button hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md;
+  }
+
+  .btn-trial {
+    @apply border-2 border-accent-green text-accent-green hover:bg-accent-green hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 active:scale-95;
+  }
+
+  .btn-whatsapp {
+    @apply bg-accent-green hover:bg-accent-green-light text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-whatsapp flex items-center gap-2 active:scale-95;
+  }
+
+  /* Glassmorphism Card */
+  .card {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .card-glass {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-glass:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Enhanced Gradients */
+  .gradient-flash {
+    @apply bg-gradient-to-r from-primary-orange via-indigo-950 to-primary-orange;
+  }
+
+  .gradient-cta {
+    @apply bg-gradient-to-r from-primary-orange to-primary-orange-dark;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-orange to-indigo-950 bg-clip-text text-transparent;
+  }
+
+  .gradient-hero {
+    @apply bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950;
+  }
+
+  /* Improved Shadows with Depth */
+  .shadow-layered {
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.2),
+      0 1px 2px rgba(0, 0, 0, 0.4),
+      0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-layered-lg {
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.3),
+      0 3px 6px rgba(0, 0, 0, 0.2),
+      0 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Scroll Fade-In Animation */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Pulse Animation for WhatsApp Button */
+  .pulse-ring {
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-ring {
+
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+  }
+
+  /* Glow Effect on Hover */
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+
+  .glow-on-hover:hover {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4), 0 0 40px rgba(14, 165, 233, 0.2);
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Smooth Gradient Animation */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Pulsing Neon Glow Animation */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+    border: 2px solid rgba(14, 165, 233, 0.5);
+    will-change: box-shadow, border-color;
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 15px rgba(14, 165, 233, 0.4), inset 0 0 10px rgba(14, 165, 233, 0.2);
+      border-color: rgba(14, 165, 233, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 40px rgba(14, 165, 233, 0.8), 0 0 60px rgba(14, 165, 233, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* Shine Sweep Effect */
+  .shine-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine-sweep::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg);
+    animation: shine-sweep 4s infinite;
+  }
+
+  @keyframes shine-sweep {
+    0% {
+      transform: rotate(30deg) translateX(-200%);
+    }
+
+    20%,
+    100% {
+      transform: rotate(30deg) translateX(300%);
+    }
+  }
+}
