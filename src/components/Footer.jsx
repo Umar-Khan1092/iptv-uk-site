@@ -27,31 +27,18 @@ const Footer = () => {
     ];
 
     const handleLinkClick = (e, link) => {
-        if (link.href.startsWith('http') || link.href.startsWith('/pdf')) {
-            return;
-        }
+        if (link.href.startsWith('http') || link.href.startsWith('/pdf')) return;
 
         e.preventDefault();
 
-        if (
-            link.href === '/installation-guide' ||
-            link.href === '/pricing' ||
-            link.href === '/terms-of-service' ||
-            link.href === '/privacy-policy' ||
-            link.href === '/refund-policy' ||
-            link.href === '/dmca-policy'
-        ) {
+        if (['/installation-guide', '/pricing', '/terms-of-service', '/privacy-policy', '/refund-policy', '/dmca-policy'].includes(link.href)) {
             navigate(link.href);
             window.scrollTo(0, 0);
             return;
         }
 
         if (link.href === '/') {
-            if (location.pathname !== '/') {
-                navigate('/');
-            } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            location.pathname !== '/' ? navigate('/') : window.scrollTo({ top: 0, behavior: 'smooth' });
             return;
         }
 
@@ -65,19 +52,18 @@ const Footer = () => {
                 }, 100);
             } else {
                 const element = document.getElementById(hash);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
             }
         }
     };
 
     return (
         <footer className="bg-slate-950">
-            <div className="max-w-7xl mx-auto bg-slate-900 text-white rounded-t-[1.5rem] sm:rounded-t-[2rem] overflow-hidden border-t border-white/5">
+            <div className="max-w-7xl mx-auto bg-slate-900 text-white rounded-t-[1.5rem] sm:rounded-t-[2rem] overflow-hidden border-t border-white/10">
                 <div className="px-6 sm:px-12 pt-16 sm:pt-20 pb-10 sm:pb-16">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                        {/* Brand Column with Logo */}
+
+                        {/* Brand Column */}
                         <div className="text-left space-y-6">
                             <Link
                                 to="/"
@@ -85,14 +71,16 @@ const Footer = () => {
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             >
                                 <img
-                                    src="/used images/logo.png"
+                                    src="/used images/logo.webp"
                                     alt="IPTV UK Logo"
+                                    width="150"
+                                    height="100"
                                     className="h-[100px] w-auto object-contain -mt-8"
                                 />
                             </Link>
 
                             <div className="-mt-3 space-y-6">
-                                <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+                                <p className="text-slate-200 text-sm leading-relaxed max-w-xs">
                                     The UK's #1 premium IPTV service provider. Access 28,000+ channels with crystal clear quality and zero buffering.
                                 </p>
 
@@ -110,29 +98,29 @@ const Footer = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label={social.label}
-                                            className="w-10 h-10 bg-slate-950/50 hover:bg-primary-orange border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 group"
+                                            className="w-10 h-10 bg-slate-950/70 hover:bg-primary-orange border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 group"
                                         >
-                                            <span className="text-lg group-hover:scale-110 transition-transform">{social.icon}</span>
+                                            <span className="text-lg text-white group-hover:scale-110 transition-transform">{social.icon}</span>
                                         </a>
                                     ))}
                                 </div>
                             </div>
                         </div>
 
-                        {/* Links Columns */}
+                        {/* Footer Links */}
                         {Object.entries(footerLinks).map(([title, links]) => (
                             <div key={title} className="text-left">
-                                <h3 className="font-bold text-lg mb-6 relative inline-block">
+                                <h2 className="font-bold text-lg mb-6 relative inline-block text-white">
                                     {title}
                                     <span className="absolute bottom-[-8px] left-0 w-8 h-1 bg-primary-orange rounded-full"></span>
-                                </h3>
+                                </h2>
                                 <ul className="space-y-4">
                                     {links.map((link) => (
                                         <li key={link.name}>
                                             <a
                                                 href={link.href}
                                                 onClick={(e) => handleLinkClick(e, link)}
-                                                className="text-slate-400 hover:text-primary-orange transition-colors text-sm flex items-center gap-2 group"
+                                                className="text-slate-300 hover:text-primary-orange transition-colors text-sm flex items-center gap-2 group"
                                                 target={
                                                     link.href.startsWith('http') || link.href.startsWith('/pdf')
                                                         ? '_blank'
@@ -144,7 +132,7 @@ const Footer = () => {
                                                         : undefined
                                                 }
                                             >
-                                                <span className="w-1 h-1 bg-slate-700 rounded-full group-hover:bg-primary-orange transition-colors"></span>
+                                                <span className="w-1 h-1 bg-slate-600 rounded-full group-hover:bg-primary-orange transition-colors"></span>
                                                 {link.name}
                                             </a>
                                         </li>
@@ -153,13 +141,13 @@ const Footer = () => {
                             </div>
                         ))}
 
-                        {/* Contact Column - Styled as a Section */}
+                        {/* Contact */}
                         <div className="text-left">
-                            <div className="bg-slate-950/50 p-6 rounded-2xl border border-white/5 space-y-6">
-                                <h3 className="font-bold text-lg flex items-center gap-2 text-white">
+                            <div className="bg-slate-950/60 p-6 rounded-2xl border border-white/10 space-y-6">
+                                <h2 className="font-bold text-lg flex items-center gap-2 text-white">
                                     Support Center
                                     <span className="w-2 h-2 bg-primary-orange rounded-full animate-pulse"></span>
-                                </h3>
+                                </h2>
                                 <div className="space-y-4">
                                     {contactLinks.map((link) => (
                                         <a
@@ -169,20 +157,21 @@ const Footer = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <div className="w-8 h-8 rounded-lg bg-primary-orange/10 flex items-center justify-center group-hover:bg-primary-orange/20 transition-colors">
+                                            <div className="w-8 h-8 rounded-lg bg-primary-orange/20 flex items-center justify-center group-hover:bg-primary-orange/30 transition-colors">
                                                 {link.icon}
                                             </div>
-                                            <span className="text-sm text-slate-400 group-hover:text-white transition-colors truncate">
+                                            <span className="text-sm text-slate-200 group-hover:text-white transition-colors truncate">
                                                 {link.name}
                                             </span>
                                         </a>
                                     ))}
                                 </div>
-                                <p className="text-[11px] text-slate-500 italic">
+                                <p className="text-[11px] text-slate-300 italic">
                                     Our support team works round-the-clock to ensure your entertainment never stops.
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

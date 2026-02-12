@@ -87,7 +87,7 @@ const PricingSection = () => {
                                         {plan.price}
                                     </span>
                                 </div>
-                                <p className="text-slate-500 mt-2 text-sm">{plan.period}</p>
+                                <p className="text-slate-400 mt-2 text-sm">{plan.period}</p>
                             </div>
 
                             <ul className="space-y-4 mb-10 flex-grow">
@@ -102,7 +102,7 @@ const PricingSection = () => {
                             <button
                                 onClick={() => window.open(CONTACT.WHATSAPP_URL, '_blank', 'noopener,noreferrer')}
                                 className={`w-full py-4 rounded-xl font-black transition-all duration-300 active:scale-95 uppercase tracking-widest text-sm shadow-xl ${plan.isPopular
-                                    ? 'bg-primary-orange hover:bg-primary-orange-dark text-white shadow-primary-orange/20'
+                                    ? 'bg-primary-orange hover:bg-primary-orange-dark text-slate-950 shadow-primary-orange/20'
                                     : 'bg-white/10 hover:bg-white/20 text-white'
                                     }`}
                             >

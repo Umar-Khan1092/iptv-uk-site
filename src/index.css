@@ -11,7 +11,7 @@
     font-family: 'Outfit', 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply bg-slate-950 text-slate-400;
+    @apply bg-slate-950 text-slate-300;
   }
 
   h1,
@@ -32,7 +32,7 @@
 
   /* Enhanced Button Styles with Active States */
   .btn-primary {
-    @apply bg-primary-orange hover:bg-primary-orange-dark text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-button hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md;
+    @apply bg-primary-orange hover:bg-primary-orange-dark text-slate-950 font-black py-3 px-8 rounded-lg transition-all duration-300 shadow-button hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-md;
   }
 
   .btn-trial {

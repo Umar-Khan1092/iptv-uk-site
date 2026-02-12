@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import SEO from './SEO';
 import {
     FaFire, FaAndroid, FaTv, FaWindows, FaApple, FaLaptop,
     FaChevronDown, FaChevronUp, FaWhatsapp,
@@ -101,6 +102,11 @@ const InstallationGuide = () => {
 
     return (
         <div className="bg-slate-950 min-h-screen pb-20">
+            <SEO
+                title="Installation Guide"
+                description="Step-by-step installation guides for Firestick, Android, Smart TV, Windows, iOS, and more."
+                url="https://iptvuk.sbs/installation-guide"
+            />
             {/* Header Area */}
             <div className="bg-slate-900 py-16 sm:py-24 text-center border-b border-white/5 relative overflow-hidden">
                 {/* Glow Background */}
@@ -127,7 +133,7 @@ const InstallationGuide = () => {
                             aria-label={`Select ${device.name}`}
                             className={`p-8 rounded-2xl transition-all duration-300 text-center flex flex-col items-center gap-6 group border shadow-2xl ${activeDevice === device.id ? 'bg-slate-900 border-primary-orange shadow-primary-orange/10' : 'bg-slate-900/40 border-white/5 hover:border-white/20 hover:bg-slate-900/60'}`}
                         >
-                            <div className={`p-5 rounded-2xl transition-all duration-300 group-hover:scale-110 ${activeDevice === device.id ? 'bg-primary-orange text-white' : 'bg-white/5 text-primary-orange group-hover:bg-white/10'}`}>
+                            <div className={`p-5 rounded-2xl transition-all duration-300 group-hover:scale-110 ${activeDevice === device.id ? 'bg-primary-orange text-slate-950' : 'bg-white/5 text-primary-orange group-hover:bg-white/10'}`}>
                                 {device.icon}
                             </div>
                             <div>
@@ -159,7 +165,7 @@ const InstallationGuide = () => {
                                     </div>
                                     <span className="font-bold text-white text-lg tracking-tight">{device.name}</span>
                                 </div>
-                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${activeDevice === device.id ? 'bg-primary-orange text-white' : 'bg-white/5 text-slate-500'}`}>
+                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${activeDevice === device.id ? 'bg-primary-orange text-slate-950' : 'bg-white/5 text-slate-500'}`}>
                                     {activeDevice === device.id ? <FaChevronUp /> : <FaChevronDown />}
                                 </div>
                             </button>
@@ -171,7 +177,7 @@ const InstallationGuide = () => {
                                 <div className="p-8 pt-2 bg-slate-900 border-t border-white/5 space-y-6">
                                     {genericSteps.map((step, idx) => (
                                         <div key={idx} className="bg-slate-950/50 p-6 rounded-2xl flex items-start gap-5 border border-white/5 hover:border-white/10 transition-colors">
-                                            <div className="w-8 h-8 rounded-xl bg-primary-orange text-white flex items-center justify-center flex-shrink-0 text-sm font-black shadow-lg shadow-primary-orange/20">
+                                            <div className="w-8 h-8 rounded-xl bg-primary-orange text-slate-950 flex items-center justify-center flex-shrink-0 text-sm font-black shadow-lg shadow-primary-orange/20">
                                                 {idx + 1}
                                             </div>
                                             <div>

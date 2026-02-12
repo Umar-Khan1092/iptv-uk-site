@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from './SEO';
 
 const DMCAPolicy = () => {
     useEffect(() => {
@@ -7,6 +8,10 @@ const DMCAPolicy = () => {
 
     return (
         <section className="py-20 bg-white">
+            <SEO
+                title="DMCA Policy"
+                url="https://iptvuk.sbs/dmca-policy"
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-10 text-left leading-tight">
                     The Digital Millennium Copyright Act, or DMCA Policy

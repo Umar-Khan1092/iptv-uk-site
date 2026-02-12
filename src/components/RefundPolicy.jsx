@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from './SEO';
 
 const RefundPolicy = () => {
     useEffect(() => {
@@ -7,6 +8,10 @@ const RefundPolicy = () => {
 
     return (
         <section className="py-20 bg-white">
+            <SEO
+                title="Refund Policy"
+                url="https://iptvuk.sbs/refund-policy"
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mb-10 text-left">
                     Refund Policy

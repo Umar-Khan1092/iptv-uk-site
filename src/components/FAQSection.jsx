@@ -69,7 +69,7 @@ const FAQSection = () => {
                                     {faq.question}
                                 </span>
 
-                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-primary-orange text-white' : 'bg-white/5 text-slate-400 group-hover:bg-white/10'}`}>
+                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-primary-orange text-slate-950' : 'bg-white/5 text-slate-400 group-hover:bg-white/10'}`}>
                                     {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                                 </div>
                             </button>

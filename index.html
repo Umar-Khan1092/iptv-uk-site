@@ -3,44 +3,136 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/used images/logo.png" />
-  <link rel="canonical" href="https://iptvuk.sbs" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>IPTV UK | #1 Premium UK IPTV Service Provider</title>
-  <meta name="description"
-    content="Access 28,000+ Channels, 150,000+ VOD in 4K & 8K. Get your 24hr Free Trial now. Crystal clear quality and zero buffering guaranteed." />
-  <meta name="keywords"
-    content="IPTV UK, Best IPTV Service, UK IPTV Provider, Smart TV IPTV, Firestick IPTV, IPTV Subscription" />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://iptvuk.sbs/" />
-  <meta property="og:title" content="IPTV UK | #1 Premium UK IPTV Service Provider" />
-  <meta property="og:description"
-    content="Experience brilliant 4K/8K quality with 28,000+ channels. Watch on any device." />
-  <meta property="og:image" content="https://iptvuk.sbs/used images/hero_section_image.jpeg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://iptvuk.sbs/" />
-  <meta property="twitter:title" content="IPTV UK | Premium Streaming Service" />
-  <meta property="twitter:description" content="Get your 24hr Free Trial. Best UK IPTV Service." />
-  <meta property="twitter:image" content="https://iptvuk.sbs/used images/hero_section_image.jpeg" />
-
-  <!-- Font Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="icon" type="image/png" href="/used images/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPTV UK | Premium IPTV Service</title>
+
+
+  <style>
+    :root {
+      --bg: #020617;
+      --primary: #0EA5E9;
+    }
+
+    body {
+      background: var(--bg);
+      margin: 0;
+      font-family: 'Outfit', -apple-system, system-ui, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      padding: 100px 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 24px;
+    }
+
+    .p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 0 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #020617;
+      font-weight: 900;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      width: fit-content;
+    }
+
+    .img-pre {
+      width: 100%;
+      aspect-ratio: 736/491;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .h1 {
+        font-size: 4.5rem;
+      }
+
+      .hero {
+        padding: 140px 24px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .img-pre {
+        display: block;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
+    media="print" onload="this.media='all'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
   </noscript>
+
+  <!-- Resource Preloading -->
+  <link rel="preload" as="image" href="/used images/hero_section_image-640.webp"
+    imagesrcset="/used images/hero_section_image-640.webp 640w, /used images/hero_section_image-1024.webp 1024w, /used images/hero_section_image-1536.webp 1536w"
+    imagesizes="(max-width: 1024px) 100vw, 736px">
+  <link rel="preload" as="image" href="/used images/logo.webp" fetchpriority="high">
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div class="shell">
+      <div class="hero">
+        <div>
+          <div
+            style="height: 80px; margin-bottom: 60px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-weight: 900; font-size: 24px;"><span style="color: var(--primary);">IPTV</span> UK</div>
+            <div style="display: flex; gap: 20px;">
+              <div style="width: 60px; height: 10px; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+              <div style="width: 60px; height: 10px; background: rgba(255,255,255,0.05); border-radius: 4px;"></div>
+            </div>
+          </div>
+          <div style="font-size: 1.25rem; font-weight: 600; color: var(--primary); margin-bottom: 15px;">4K & 8K
+            Entertainment</div>
+          <h1 class="h1">Premium IPTV UK <br>Fast & Stable</h1>
+          <p class="p">Enjoy premium IPTV with 32,000+ channels, VOD, and ultra-stable streaming. Built-in VPN
+            protection ensures zero buffering.</p>
+          <div class="btn">Subscribe Now</div>
+        </div>
+        <div class="img-pre"></div>
+      </div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

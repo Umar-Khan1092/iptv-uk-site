@@ -1,12 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
 
 // Lazy load page components to optimize bundle size
-const Home = lazy(() => import('./components/Home'));
+import Home from './components/Home';
 const InstallationGuide = lazy(() => import('./components/InstallationGuide'));
 const PricingPage = lazy(() => import('./components/PricingPage'));
 const TermsOfService = lazy(() => import('./components/TermsOfService'));
@@ -23,29 +24,31 @@ const PageLoader = () => (
 
 function App() {
     return (
-        <div className="min-h-screen bg-slate-950">
-            <ScrollToTop />
-            <Header />
+        <HelmetProvider>
+            <div className="min-h-screen bg-slate-950">
+                <ScrollToTop />
+                <Header />
 
-            <main>
-                <Suspense fallback={<PageLoader />}>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/installation-guide" element={<InstallationGuide />} />
-                        <Route path="/pricing" element={<PricingPage />} />
-                        <Route path="/terms-of-service" element={<TermsOfService />} />
-                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                        <Route path="/refund-policy" element={<RefundPolicy />} />
-                        <Route path="/dmca-policy" element={<DMCAPolicy />} />
-                    </Routes>
-                </Suspense>
-            </main>
+                <main>
+                    <Suspense fallback={<PageLoader />}>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/installation-guide" element={<InstallationGuide />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/terms-of-service" element={<TermsOfService />} />
+                            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                            <Route path="/refund-policy" element={<RefundPolicy />} />
+                            <Route path="/dmca-policy" element={<DMCAPolicy />} />
+                        </Routes>
+                    </Suspense>
+                </main>
 
-            <Footer />
+                <Footer />
 
-            {/* Fixed WhatsApp Button */}
-            <WhatsAppButton fixed />
-        </div>
+                {/* Fixed WhatsApp Button */}
+                <WhatsAppButton fixed />
+            </div>
+        </HelmetProvider>
     );
 }
 

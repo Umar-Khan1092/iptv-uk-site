@@ -62,7 +62,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                                     <a href={`mailto:${CONTACT.EMAIL}`} className="text-xl font-bold text-white hover:text-primary-orange transition-colors">
                                         {CONTACT.EMAIL}
                                     </a>
-                                    <p className="text-slate-500 text-sm font-medium italic">Response within 12 hours</p>
+                                    <p className="text-slate-400 text-sm font-medium italic">Response within 12 hours</p>
                                 </div>
                             </div>
 
@@ -76,7 +76,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                                     <a href={`tel:${CONTACT.PHONE}`} className="text-xl font-bold text-white hover:text-primary-orange transition-colors">
                                         {CONTACT.PHONE}
                                     </a>
-                                    <p className="text-slate-500 text-sm font-medium italic">Available for instant calls</p>
+                                    <p className="text-slate-400 text-sm font-medium italic">Available for instant calls</p>
                                 </div>
                             </div>
 
@@ -88,7 +88,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                                 <div className="space-y-1">
                                     <h4 className="font-bold text-white uppercase tracking-widest text-xs opacity-60">Real-time Assistance</h4>
                                     <p className="text-xl font-bold text-white">Live Dashboard Chat</p>
-                                    <p className="text-slate-500 text-sm font-medium italic">Average response: 3 mins</p>
+                                    <p className="text-slate-400 text-sm font-medium italic">Average response: 3 mins</p>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">
+                                    <label htmlFor="name" className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] ml-1">
                                         Identity
                                     </label>
                                     <input
@@ -147,7 +147,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">
+                                    <label htmlFor="email" className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] ml-1">
                                         Electronic Mail
                                     </label>
                                     <input
@@ -164,7 +164,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="subject" className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">
+                                <label htmlFor="subject" className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] ml-1">
                                     Objective
                                 </label>
                                 <input
@@ -180,7 +180,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] ml-1">
+                                <label htmlFor="message" className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] ml-1">
                                     Transmission Data
                                 </label>
                                 <textarea
@@ -198,7 +198,7 @@ const ContactSection = ({ showHeading = true, compact = false }) => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-primary-orange hover:bg-primary-orange-dark disabled:bg-slate-800 disabled:cursor-not-allowed text-white font-black py-5 px-8 rounded-2xl transition-all duration-300 shadow-2xl shadow-primary-orange/20 flex items-center justify-center gap-4 active:scale-95 uppercase tracking-widest text-sm"
+                                className="w-full bg-primary-orange hover:bg-primary-orange-dark disabled:bg-slate-800 disabled:cursor-not-allowed text-slate-950 font-black py-5 px-8 rounded-2xl transition-all duration-300 shadow-2xl shadow-primary-orange/20 flex items-center justify-center gap-4 active:scale-95 uppercase tracking-widest text-sm"
                             >
                                 {isSubmitting ? (
                                     <>

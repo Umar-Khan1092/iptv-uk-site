@@ -68,6 +68,8 @@ const EntertainmentSection = () => {
                                 <img
                                     src="/used images/Perfect Entertainment.webp"
                                     alt="Perfect Entertainment IPTV"
+                                    width="600"
+                                    height="400"
                                     className="w-full h-auto object-cover scale-105 transition-transform duration-700"
                                     loading="lazy"
                                 />
@@ -81,7 +83,7 @@ const EntertainmentSection = () => {
                                     <FaBolt />
                                 </div>
                                 <div>
-                                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Status</p>
+                                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Status</p>
                                     <p className="text-lg font-black text-white leading-none">Instant Online</p>
                                 </div>
                             </div>
