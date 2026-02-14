@@ -18,7 +18,7 @@ const FAQSection = () => {
             answer: (
                 <>
                     You can use <a href="https://iptvuk.sbs" target="_blank" rel="noopener noreferrer">
-                        IPTVUK.sbs
+                        iptvuk.sbs
                     </a> IPTV on Smart TVs, Android Boxes, Fire TV Stick, iOS/Android phones, and web browsers.
                 </>
             )
@@ -42,8 +42,17 @@ const FAQSection = () => {
         },
         {
             question: "Is IPTV legal in the United Kingdom?",
-            answer: "Yes, using our IPTV streaming service in the UK is entirely legal. We adhere to all UK broadcasting regulations and maintain necessary license arrangements. You're gaining authentic access to VOD content and live channels."
+            answer: (
+                <>
+                    Yes, using our IPTV streaming service{" "}
+                    <a href="https://iptvuk.sbs" target="_blank" rel="noopener noreferrer">
+                        iptvuk.sbs
+                    </a>{" "}
+                    in the UK is entirely legal. We adhere to all UK broadcasting regulations and maintain necessary license arrangements. You're gaining authentic access to VOD content and live channels.
+                </>
+            )
         },
+
         {
             question: "Do I require a certain internet speed?",
             answer: "For SD, HD, and 4K content, we advise a minimum internet speed of 10 Mbps, 15 Mbps, and 25 Mbps, respectively. For uninterrupted viewing, a steady internet connection is more crucial than raw speed."
