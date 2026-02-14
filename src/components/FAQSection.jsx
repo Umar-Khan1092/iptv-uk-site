@@ -15,8 +15,15 @@ const FAQSection = () => {
         },
         {
             question: "What devices can I use with IPTVUK.SBS ?",
-            answer: 'You can use <a href="https://iptvuk.sbs" target="_blank" rel="noopener noreferrer">iptvuk.sbs</a> IPTV on Smart TVs, Android Boxes, Fire TV Stick, iOS/Android phones, and web browsers.'
+            answer: (
+                <>
+                    You can use <a href="https://iptvuk.sbs" target="_blank" rel="noopener noreferrer">
+                        IPTVUK.sbs
+                    </a> IPTV on Smart TVs, Android Boxes, Fire TV Stick, iOS/Android phones, and web browsers.
+                </>
+            )
         },
+
         {
             question: "Is It worth Paying for IPTV?",
             answer: "Absolutely! Paying for IPTV allows you to watch high-quality channels, live sports, your favourite TV shows, and the most recent films without interruption."
