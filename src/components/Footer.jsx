@@ -174,6 +174,13 @@ const Footer = () => {
 
                     </div>
                 </div>
+                {/* 🔹 Hidden static links for Google to crawl */}
+                <div style={{ display: 'none' }}>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/refund-policy">Refund Policy</a>
+                    <a href="/dmca-policy">DMCA Policy</a>
+                </div>
             </div>
         </footer>
     );
