@@ -14,6 +14,7 @@ const TermsOfService = lazy(() => import('./components/TermsOfService'));
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
 const RefundPolicy = lazy(() => import('./components/RefundPolicy'));
 const DMCAPolicy = lazy(() => import('./components/DMCAPolicy'));
+const Blog = lazy(() => import('./components/Blog'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -39,6 +40,7 @@ function App() {
                             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                             <Route path="/refund-policy" element={<RefundPolicy />} />
                             <Route path="/dmca-policy" element={<DMCAPolicy />} />
+                            <Route path="/blog" element={<Blog />} />
                         </Routes>
                     </Suspense>
                 </main>
