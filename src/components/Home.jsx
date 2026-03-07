@@ -12,6 +12,7 @@ const DevicesSection = lazy(() => import('./DevicesSection'));
 const EntertainmentSection = lazy(() => import('./EntertainmentSection'));
 const FAQSection = lazy(() => import('./FAQSection'));
 const ContactSection = lazy(() => import('./ContactSection'));
+const BlogSection = lazy(() => import('./BlogSection'));
 
 const SectionPlaceholder = () => (
     <div className="py-20 flex justify-center">
@@ -33,6 +34,7 @@ const Home = () => {
                 <DevicesSection />
                 <EntertainmentSection />
                 <FAQSection />
+                <BlogSection />
                 <ContactSection />
             </Suspense>
         </>
