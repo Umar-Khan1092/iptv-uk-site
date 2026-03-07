@@ -13,6 +13,7 @@ const Header = () => {
         { name: 'Pricing', href: '/pricing' },
         { name: 'Features', href: '/#features' },
         { name: 'FAQ', href: '/#faq' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/#contact' },
     ];
 
@@ -20,7 +21,7 @@ const Header = () => {
         e.preventDefault();
         setMobileMenuOpen(false);
 
-        if (['/installation-guide', '/pricing'].includes(link.href)) {
+        if (['/installation-guide', '/pricing','/blog'].includes(link.href)) {
             navigate(link.href);
             return;
         }
