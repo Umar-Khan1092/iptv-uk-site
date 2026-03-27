@@ -9,7 +9,7 @@ const WhatsAppButton = ({ fixed = false, className = '' }) => {
 
     return (
         <button
-            onClick={handleWhatsAppClick}
+            onClick={() => window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
             className={`${fixed ? 'fixed bottom-6 right-6 z-[100]' : 'relative'} group ${className}`}
             aria-label="Contact us on WhatsApp for instant support"
         >
