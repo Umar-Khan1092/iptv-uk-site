@@ -93,7 +93,7 @@ const Header = () => {
 
                     <div className="hidden lg:flex items-center space-x-4">
                         <button
-                            onClick={() => window.open('https://wa.me/447412300833', '_blank', 'noopener,noreferrer')}
+                            onClick={() => window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
                             className="btn-primary text-slate-950 text-sm tracking-widest uppercase shadow-primary-orange/20"
                         >
                             Subscribe Now
@@ -126,7 +126,7 @@ const Header = () => {
                             ))}
                             <div className="pt-4 px-4">
                                 <button
-                                    onClick={() => window.open('https://wa.me/447412300833', '_blank', 'noopener,noreferrer')}
+                                    onClick={() => window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
                                     className="w-full btn-primary text-white text-sm tracking-widest uppercase"
                                 >
                                     Subscribe Now
