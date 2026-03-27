@@ -36,7 +36,7 @@ export default function HeroSection() {
                         {/* PRIMARY CTA */}
                         <button
                             onClick={() =>
-                                window.open(CONTACT.WHATSAPP_URL, "_blank", "noopener,noreferrer")
+                                window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', "_blank", "noopener,noreferrer")
                             }
                             className="btn-primary text-slate-950 px-8 py-3 text-lg glow-on-hover"
                             aria-label="Subscribe Now"
@@ -62,7 +62,7 @@ export default function HeroSection() {
 
                                 <button
                                     onClick={() =>
-                                        window.open(CONTACT.WHATSAPP_URL, "_blank", "noopener,noreferrer")
+                                        window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', "_blank", "noopener,noreferrer")
                                     }
                                     className="btn-primary text-slate-950 text-sm tracking-widest uppercase shadow-primary-orange/20 font-black py-3 rounded-xl w-full"
                                 >
