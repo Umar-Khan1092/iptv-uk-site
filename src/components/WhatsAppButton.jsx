@@ -3,13 +3,19 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { CONTACT } from '../constants/config';
 
 const WhatsAppButton = ({ fixed = false, className = '' }) => {
+
     const handleWhatsAppClick = () => {
-        window.open(CONTACT.WHATSAPP_URL, '_blank');
+        const message = encodeURIComponent("I want subscription for iptvuk.sbs");
+
+        // Ensure base URL is clean (no trailing slash issues)
+        const baseUrl = CONTACT.WHATSAPP_URL.replace(/\/$/, '');
+
+        window.open(`${baseUrl}?text=${message}`, '_blank', 'noopener,noreferrer');
     };
 
     return (
         <button
-            onClick={() => window.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
+            onClick={handleWhatsAppClick}
             className={`${fixed ? 'fixed bottom-6 right-6 z-[100]' : 'relative'} group ${className}`}
             aria-label="Contact us on WhatsApp for instant support"
         >
@@ -19,11 +25,17 @@ const WhatsAppButton = ({ fixed = false, className = '' }) => {
             )}
 
             <div className={`${fixed ? 'w-16 h-16' : 'w-14 h-14'} bg-accent-green hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl shadow-accent-green/30 transition-all duration-300 hover:scale-110 relative z-10 border-2 border-white/10`}>
-                <FaWhatsapp className={`${fixed ? 'text-4xl' : 'text-3xl'} text-white group-hover:rotate-12 transition-transform`} />
+                
+                <FaWhatsapp
+                    className={`${fixed ? 'text-4xl' : 'text-3xl'} text-white group-hover:rotate-12 transition-transform`}
+                />
 
                 {/* Online Status Dot */}
                 <div className="absolute top-1 right-1 w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" aria-label="Online now"></span>
+                    <span
+                        className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"
+                        aria-label="Online now"
+                    ></span>
                 </div>
             </div>
         </button>
