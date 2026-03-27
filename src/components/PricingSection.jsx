@@ -100,7 +100,7 @@ const PricingSection = () => {
                             </ul>
 
                             <button
-                                onClick={() => 'https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
+                                onClick={() => windows.open('https://wa.me/447412300833?text=I%20want%20subscription%20for%20iptvuk.sbs', '_blank', 'noopener,noreferrer')}
                                 className={`w-full py-4 rounded-xl font-black transition-all duration-300 active:scale-95 uppercase tracking-widest text-sm shadow-xl ${plan.isPopular
                                     ? 'bg-primary-orange hover:bg-primary-orange-dark text-slate-950 shadow-primary-orange/20'
                                     : 'bg-white/10 hover:bg-white/20 text-white'
